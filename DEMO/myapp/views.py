@@ -1,14 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime
 # Create your views here.
-def calculate():
-    x=1
-    y=2
-    return x+y
-
 
 def sayhello(request):
-    x=1
-    y=2
-    return render(request,'hello.html',{'name': 'Kev'})
+    now = datetime.now()
+    return render(request,'hello.html',locals()) #locals 包含 now 和 username 變數
 

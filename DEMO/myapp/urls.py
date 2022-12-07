@@ -3,5 +3,5 @@ from . import views
 
 # URLConf
 urlpatterns = [
-    path('hello/',views.sayhello),
+    path('hello/<str:username>',views.sayhello),
 ]
