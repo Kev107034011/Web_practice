@@ -10,3 +10,4 @@ def sayhello(request,username):
 def showimg(request,username):
     now = datetime.now()
     return render(request,'Show_img.html',locals()) #locals 包含 now 和 username 變數
+
